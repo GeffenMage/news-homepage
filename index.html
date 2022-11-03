@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script defer src="./index.js"></script>
   <title>Frontend Mentor | News homepage</title>
 </head>
 
 <body>
+  <div class="overlay"></div>
   <header class="header">
     <img class="logo" src="./assets/images/logo.svg" alt="logo">
     <nav class="nav-menu">
@@ -23,9 +25,35 @@
         <li class="nav-menu-item">Trending</li>
         <li class="nav-menu-item">Categories</li>
       </ul>
+      <div id="menu-dialog" class="nav-menu-dialog">
+        <div class="menu-dialog-btn-row">
+          <button class="dialog-close-btn" type="menu">
+            <img src="./assets/images/icon-menu-close.svg" alt="close">
+          </button>
+        </div>
+        <div class="menu-dialog-content">
+          <ul class="nav-menu-list">
+            <li class="nav-menu-item">
+              <a class="nav-menu-link" href="#home">Home</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link" href="#news">New</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link" href="#">Popular</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link" href="#trending">Trending</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link" href="#">Categories</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
-  <main>
+  <main id="home">
     <section class="main-section">
       <img class="main-img" src="./assets/images/image-web-3-mobile.jpg" alt="web3">
       <h1 class="main-heading">
@@ -38,59 +66,77 @@
       </p>
       <a role="button" class="read-more-btn" href="#">Read more</a>
     </section>
-    <section class="news-section">
+    <section id="news" class="news-section">
       <header class="news-section-header">New</header>
       <ul class="news-list">
-        <li class="news-item">
-          Hydrogen VS Electric Cars
+        <li class="news-list-item">
+          <header class="news-list-item-header">
+            Hydrogen VS Electric Cars
+          </header>
           Will hydrogen-fueled cars ever catch up to EVs?
         </li>
-        <li class="news-item">
-          The Downsides of AI Artistry
+        <li class="news-list-item">
+          <header class="news-list-item-header">
+            The Downsides of AI Artistry
+          </header>
           What are the possible adverse effects of on-demand AI image generation?
         </li>
-        <li class="news-item">
-          Is VC Funding Drying Up?
+        <li class="news-list-item">
+          <header class="news-list-item-header">
+            Is VC Funding Drying Up?
+          </header>
           Private funding by VC firms is down 50% YOY. We take a look at what that means.
         </li>
       </ul>
     </section>
-    <section class="trending-section">
+    <section id="trending" class="trending-section">
       <ol class="trending-list">
         <li class="trending-list-item">
-          <img src="./assets/images/image-retro-pcs.jpg" alt="retro pcs">
-          <header>
-            Reviving Retro PCs
-          </header>
-          <p>
-            What happens when old PCs are given modern upgrades?
-          </p>
+          <div class="trending-list-item-content">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="retro pcs">
+            <div>
+              <header class="trending-list-item-header">
+                Reviving Retro PCs
+              </header>
+              <p class="trending-list-item-paragraph">
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
         </li>
         <li class="trending-list-item">
-          <img src="./assets/images/image-top-laptops.jpg" alt="top laptops">
-          <header>
-            Top 10 Laptops of 2022
-          </header>
-          <p>
-            Our best picks for various needs and budgets.
-          </p>
+          <div class="trending-list-item-content">
+            <img src="./assets/images/image-top-laptops.jpg" alt="top laptops">
+            <div>
+              <header class="trending-list-item-header">
+                Top 10 Laptops of 2022
+              </header>
+              <p class="trending-list-item-paragraph">
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
         </li>
         <li class="trending-list-item">
-          <img src="./assets/images/image-gaming-growth.jpg" alt="gaming growth">
-          <header>
-            The Growth of Gaming
-          </header>
-          <p>
-            How the pandemic has sparked fresh opportunities.
-          </p>
+          <div class="trending-list-item-content">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="gaming growth">
+            <div>
+              <header class="trending-list-item-header">
+                The Growth of Gaming
+              </header>
+              <p class="trending-list-item-paragraph">
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
         </li>
       </ol>
     </section>
   </main>
-  <footer>
+  <footer class="page-footer">
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Daniel Sousa Duplat</a>.
     </div>
   </footer>
 </body>
