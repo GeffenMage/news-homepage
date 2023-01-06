@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <script defer src="./index.js"></script>
   <title>Frontend Mentor | News homepage</title>
@@ -19,11 +19,21 @@
         <img src="./assets/images/icon-menu.svg" alt="menu">
       </button>
       <ul class="nav-menu-list">
-        <li class="nav-menu-item">Home</li>
-        <li class="nav-menu-item">New</li>
-        <li class="nav-menu-item">Popular</li>
-        <li class="nav-menu-item">Trending</li>
-        <li class="nav-menu-item">Categories</li>
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#home">Home</a>
+        </li>
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#news">New</a>
+        </li>
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#">Popular</a>
+        </li>
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#trending">Trending</a>
+        </li>
+        <li class="nav-menu-item">
+          <a class="nav-menu-link" href="#">Categories</a>
+        </li>
       </ul>
       <div id="menu-dialog" class="nav-menu-dialog">
         <div class="menu-dialog-btn-row">
@@ -56,15 +66,19 @@
   <main id="home">
     <section class="main-section">
       <img class="main-img" src="./assets/images/image-web-3-mobile.jpg" alt="web3">
-      <h1 class="main-heading">
-        The Bright Future of Web 3.0?
-      </h1>
-      <p class="main-paragraph">
-        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of
-        the people.
-        But is it really fulfilling its promise?
-      </p>
-      <a role="button" class="read-more-btn" href="#">Read more</a>
+      <div class="main-section-content">
+        <h1 class="main-heading">
+          The Bright Future of Web 3.0?
+        </h1>
+        <div class="main-section-paragraph-container">
+          <p class="main-paragraph">
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of
+            the people.
+            But is it really fulfilling its promise?
+          </p>
+          <a role="button" class="read-more-btn" href="#">Read more</a>
+        </div>
+      </div>
     </section>
     <section id="news" class="news-section">
       <header class="news-section-header">New</header>
